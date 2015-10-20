@@ -1,0 +1,9 @@
+.height-small {
+    height: 100px;
+}
+
+.height-medium {
+    width: 100%;
+    height: 400px;
+    background-color: #0175E4;
+}
