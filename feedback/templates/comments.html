@@ -1,0 +1,12 @@
+<table>
+    <tr>
+        <td>Тема</td>
+        <td>Время отправки</td>
+    </tr>
+    {% for comment in comments %}
+    <tr>
+        <td><a href=" {% url 'feedback:comment' comment.id %}">{{ comment.subject }}</a></td>
+        <td>{{ comment.date }}</td>
+    </tr>
+    {% endfor %}
+</table>

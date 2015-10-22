@@ -1,6 +1,6 @@
 html, body, .container-fluid {
     height: 100%;
-    min-height: 190px;
+    min-height: 245px;
 }
 html {
   position: relative;
@@ -21,6 +21,15 @@ footer {
   color: #ffffff;
 }
 
+textarea, input {
+    color: black;
+    width: 100%;
+}
+
+td {
+    padding-bottom: 15px;
+}
+
 .myfooter {
     color: #ffffff;
     font-size: 16px;
@@ -37,4 +46,27 @@ footer {
     display:table-cell;
     vertical-align:middle;
     text-align:center;
+}
+
+.child-without-center {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.offset-right {
+    padding-right: 5px;
+    float: right;
+    padding-top: 5px;
+    width: 100%;
+}
+
+.feedback {
+    padding-top: 55px;
+    height: 20px;
+    color: white;
+    font-size: 22px;
+}
+
+.feedback a {
+    color: white;
 }

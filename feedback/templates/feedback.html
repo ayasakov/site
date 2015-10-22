@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'bower_components/bootstrap/dist/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+    <div class="container">
+        <img class="" src="/static/img/logo.png" style="width: 216px; height: 68px; margin-top: 5px; margin-bottom: 45px;">
+        <div class="parent center-block" style="padding-top: 40px;">
+
+        <div class="child-without-center">
+
+            {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+            <form action="{% url 'feedback:send' %}" method="post">
+            {% csrf_token %}
+                <table>
+                    <tr>
+                        <td class="offset-right"><label for="author">Ваше имя</label></td>
+                        <td><input type="text" name="author" id="author"></td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td class="offset-right"><label>Ваш телефон или e-mail</label></td>
+                        <td><input type="text" name="subject" id="subject"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="text">Что Вас интересует?</label></td>
+                        <td><textarea name="text" id="text" cols="50" rows="10"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="2" class="offset-right"><input type="submit" onclick='console.log("sdsds"); location.href="http://127.0.0.1:8000/"' value="Оставить заявку" /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    </div>
+
+
+    <footer class="footer">
+      <div class="container">
+          <ul class="nav navbar-nav">
+             <li class="myfooter">
+                   <strong>Startline IT | 2015</strong>
+             </li>
+              <li class="myfooter">
+                  <strong></strong>
+              </li>
+          </ul>
+           <ul class="nav navbar-nav navbar-right">
+               <li class="myfooter">
+                   <abbr title="Адрес"><span class="glyphicon glyphicon-home"></span></abbr> г. Саратов, ул. Октябрьская, 44
+               </li>
+               <li class="myfooter">
+                   <abbr title="Телефон"><span class="glyphicon glyphicon-phone-alt"></span></abbr> +7(8452) 650-122
+               </li>
+          </ul>
+      </div>
+    </footer>
+</body>
+<script>
+
+</script>
+</html>

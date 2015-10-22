@@ -1,0 +1,14 @@
+<table>
+    <tr>
+        <td><label for="author">Автор</label></td>
+        <td><input type="text" name="author" id="author" value="{{ comment.author }}"></td>
+    </tr>
+    <tr>
+        <td><label>Тема</label></td>
+        <td><input type="text" name="subject" id="subject" value="{{ comment.subject }}"></td>
+    </tr>
+    <tr>
+        <td><label for="text">Сообщение</label></td>
+        <td><textarea name="text" id="text" cols="50" rows="10">{{ comment.text }}</textarea></td>
+    </tr>
+</table>
